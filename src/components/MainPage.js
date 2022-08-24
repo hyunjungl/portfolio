@@ -15,7 +15,7 @@ export default function MainPage() {
       </Third>
       <Fourth>
         <p>PROJECTS</p>
-      </Fourth>
+      </Fourth>s
       <Fifth>
         <p>CONTACT</p>
       </Fifth>
@@ -25,15 +25,17 @@ export default function MainPage() {
 
 const Block = styled.div`
   width: 100vw;
-  height: 1000px;
-  background: skyblue;
+  height: 700px;
+  background: url(${require("../img/mainw.jpg")});
+  background-size: cover;
+  background-position:  100%;
 `;
 
 const Second = styled.div`
   display: flex;
   justify-content: center;
   width: 100vw;
-  height: 900px;
+  height: 800px;
   background: white;
 
   p {

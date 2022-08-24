@@ -2,7 +2,6 @@ import MainPage from "./components/MainPage";
 import { createGlobalStyle } from "styled-components";
 import Skills from "./components/Skills";
 import React from "react";
-import { BrowserRouter as router, route, switch, link } from "react-router-dom";
 
 const GlobalStyle = createGlobalStyle`
   * {
