@@ -1,5 +1,8 @@
 import styled, { css } from "styled-components";
 import { useState, useEffect } from "react";
+import { slideState } from "../atoms/slide";
+import { useSetRecoilState } from 'recoil';
+
 
 export default function Navigation() {
   const [scrollY, setScrollY] = useState(0);
@@ -20,13 +23,16 @@ export default function Navigation() {
     };
   });
 
+  window.addEventListener("scroll")
+  const setIndex = useSetRecoilState(slideState);
+
   return (
     <NavBlock active={scrollY > window.innerHeight}>
       <ul>
-        <li>About</li>
-        <li>Skills</li>
-        <li>Projects</li>
-        <li>Contact</li>
+        <Li onClick={() => setIndex((index) => index + 1)} >About</Li>
+        <Li onClick={() => setIndex((index) => index + 1)}>Skills</Li>
+        <Li onClick={() => setIndex((index) => index + 1)}>Projects</Li>
+        <Li onClick={() => setIndex((index) => index + 1)}>Contact</Li>
       </ul>
     </NavBlock>
   );
@@ -66,3 +72,8 @@ const NavBlock = styled.nav`
     margin-left: 50px;
   }
 `;
+
+const Ul=styled.div`
+
+`
+const Li =styled.div``

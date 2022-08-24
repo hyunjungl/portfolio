@@ -1,23 +1,28 @@
 import styled from "styled-components";
+import Contact from "./Contact";
 import Navigation from "./Navigation";
+import Skills from "./Skills";
 
 export default function MainPage() {
+  
   return (
     <>
-      <Block />
-      <Second>
+      <Block id="scroll-container"/>
+      <Second id="section1">
         <Navigation />
         <p>ABOUT</p>
         <p></p>
       </Second>
-      <Third>
+      <Third id="section2">
         <p>SKILLS</p>
+        <Skills/>
       </Third>
-      <Fourth>
+      <Fourth id="section3">
         <p>PROJECTS</p>
-      </Fourth>s
-      <Fifth>
+      </Fourth>
+      <Fifth id="section4">
         <p>CONTACT</p>
+        <Contact />
       </Fifth>
     </>
   );
@@ -26,9 +31,10 @@ export default function MainPage() {
 const Block = styled.div`
   width: 100vw;
   height: 700px;
-  background: url(${require("../img/mainw.jpg")});
+  background: url(${require("../img/main.jpg")});
   background-size: cover;
-  background-position:  100%;
+  background-position:  50%;
+
 `;
 
 const Second = styled.div`
