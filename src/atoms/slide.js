@@ -1,6 +1,6 @@
-import {atom} from "recoil";
+import { atom } from "recoil";
 
 export const slideState = atom({
-    key: "slideState",
-    default: 0
+  key: "slideState",
+  default: 0,
 });

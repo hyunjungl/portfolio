@@ -2,6 +2,12 @@ import MainPage from "./components/MainPage";
 import { createGlobalStyle } from "styled-components";
 import Skills from "./components/Skills";
 import React from "react";
+import { RecoilRoot, atom } from "recoil";
+
+export const sectionIdx = atom({
+  key: "sectionIdx",
+  default: 0,
+});
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -22,9 +28,11 @@ function App() {
   return (
     <>
       <GlobalStyle />
-      <MainPage>
-        <Skills />
-      </MainPage>
+      <RecoilRoot>
+        <MainPage>
+          <Skills />
+        </MainPage>
+      </RecoilRoot>
     </>
   );
 }

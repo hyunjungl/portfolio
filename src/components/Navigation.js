@@ -1,13 +1,16 @@
 import styled, { css } from "styled-components";
 import { useState, useEffect } from "react";
-import { slideState } from "../atoms/slide";
-import { useSetRecoilState } from 'recoil';
-
+import { useSetRecoilState } from "recoil";
+import { sectionIdx } from "../App";
 
 export default function Navigation() {
+  //네비게이션 스크롤시 나타남
   const [scrollY, setScrollY] = useState(0);
+  const setIndex = useSetRecoilState(sectionIdx);
   // const [scrollActive, setScrollActiove] = useState(false);
-
+  function handleIndex(index) {
+    setIndex(index);
+  }
   function handleScroll() {
     setScrollY(window.scrollY);
     console.log(scrollY);
@@ -23,16 +26,37 @@ export default function Navigation() {
     };
   });
 
-  window.addEventListener("scroll")
-  const setIndex = useSetRecoilState(slideState);
-
   return (
     <NavBlock active={scrollY > window.innerHeight}>
       <ul>
-        <Li onClick={() => setIndex((index) => index + 1)} >About</Li>
-        <Li onClick={() => setIndex((index) => index + 1)}>Skills</Li>
-        <Li onClick={() => setIndex((index) => index + 1)}>Projects</Li>
-        <Li onClick={() => setIndex((index) => index + 1)}>Contact</Li>
+        <li
+          onClick={() => {
+            handleIndex(0);
+          }}
+        >
+          About
+        </li>
+        <li
+          onClick={() => {
+            handleIndex(1);
+          }}
+        >
+          Skills
+        </li>
+        <li
+          onClick={() => {
+            handleIndex(2);
+          }}
+        >
+          Projects
+        </li>
+        <li
+          onClick={() => {
+            handleIndex(3);
+          }}
+        >
+          Contact
+        </li>
       </ul>
     </NavBlock>
   );
@@ -72,8 +96,3 @@ const NavBlock = styled.nav`
     margin-left: 50px;
   }
 `;
-
-const Ul=styled.div`
-
-`
-const Li =styled.div``
