@@ -1,33 +1,74 @@
 import styled from "styled-components";
 
 export default function Skills() {
-  return <Block>
-    <div id="box1"></div>
-    <div id="box2"></div>
-    <div id="box3"></div>
-    <div id="box4"></div>
-    <div id="box5"></div>
-    <div id="box6"></div>
-  </Block>;
-  
+  return (
+    <Block>
+      <div>
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+      </div>
+      <div>
+        <div id="box4"></div>
+        <div id="box5"></div>
+        <div id="box6"></div>
+      </div>
+    </Block>
+  );
 }
 
 const Block = styled.div`
-display: flex;
-justify-content: center;
-
-#box1 {width: 100px;
-height: 100px;
-background: url(${require("../img/html.png")});
-background-size: cover;
-background-position:  50%;
-}
- #box2 {
-  width: 100px;
-  height: 100px;
-  background: url(${require("../img/sass.png")});
-  background-size: cover;
-  background-position:  50%;
- }
-
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    #box1 {
+      width: 100px;
+      height: 100px;
+      background: url(${require("../img/html.png")});
+      background-size: cover;
+      background-repeat: none;
+    }
+    #box2 {
+      width: 100px;
+      height: 100px;
+      background: url(${require("../img/CSS3.png")});
+      background-size: cover;
+      background-position: 50%;
+      margin-left: 200px;
+    }
+    #box3 {
+      width: 100px;
+      height: 100px;
+      background: url(${require("../img/JavaScript.png")});
+      background-size: cover;
+      background-position: 50%;
+      margin-left: 200px;
+    }
+  }
+  div {
+    #box4 {
+      width: 100px;
+      height: 100px;
+      background: url(${require("../img/sass.png")});
+      background-size: cover;
+      background-position: 50%;
+    }
+    #box5 {
+      width: 100px;
+      height: 100px;
+      background: url(${require("../img/react.webp")});
+      background-size: cover;
+      background-position: 50%;
+      margin-left: 200px;
+    }
+    #box6 {
+      width: 100px;
+      height: 100px;
+      background: url(${require("../img/git.png")});
+      background-size: cover;
+      background-position: 100%;
+      margin-left: 200px;
+    }
+  }
 `;

@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import { useRecoilState } from "recoil";
 import styled, { css } from "styled-components";
 import { sectionIdx } from "../App";
-import ViewWorks from "./ViewWorks";
 
 export default function SectionMove() {
   const [scroll, setScroll] = useState(0);
@@ -46,12 +45,12 @@ export default function SectionMove() {
         {scroll > 200 ? "200px 이상 내려옴" : "200px 이상 내려오지 않음"}
         인덱스: {index}
       </div>
-      <Text style={{ marginTop: 500 }} scroll={scroll}>
+      {/* <Text style={{ marginTop: 500 }} scroll={scroll}>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa
         accusamus, soluta voluptas perferendis totam enim doloremque temporibus
         sit nulla iste dicta nemo eveniet incidunt fugit odio atque aut magni
         cumque!
-      </Text>
+      </Text> */}
     </div>
   );
 }

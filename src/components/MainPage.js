@@ -6,6 +6,7 @@ import { RiKakaoTalkFill } from "react-icons/ri";
 import { FiPhone } from "react-icons/fi";
 import { VscMail } from "react-icons/vsc";
 import { BsGithub } from "react-icons/bs";
+import Projects from "./Projects";
 
 export default function MainPage() {
   return (
@@ -19,13 +20,16 @@ export default function MainPage() {
       </Second>
       <Third id="2">
         <p>SKILLS</p>
-        <Skills />
+        <div>
+          <Skills />
+        </div>
       </Third>
       <Fourth id="3">
         <p>PROJECTS</p>
+        <Projects />
       </Fourth>
       <Fifth id="4">
-        <h1>CONTACT</h1>
+        <p>CONTACT</p>
         <div id="box1">
           <div id="phone">
             <FiPhone />
@@ -48,41 +52,50 @@ export default function MainPage() {
 const Header = styled.div`
   width: 100vw;
   height: 900px;
-  background: url(${require("../img/beach.jpg")});
-  background-size: cover;
-  background-position: 80% 90%;
+  /* background: url(${require("../img/rainbow.png")}); */
+  /* background-size: 300px;
+  background-repeat: no-repeat;
+  background-position: 400px 300px; */
+  background-color: skyblue;
 `;
 
 const Second = styled.div`
   display: flex;
   justify-content: center;
   width: 100vw;
-  height: 800px;
+  height: 900px;
   background: white;
 
   p {
-    margin-top: 80px;
+    margin-top: 50px;
     font-size: 40px;
   }
 `;
 
 const Third = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 100vw;
   height: 900px;
   p {
     margin-top: 50px;
     font-size: 40px;
   }
+  div {
+    margin-top: 40px;
+  }
 `;
 const Fourth = styled.div`
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 100vw;
-  height: 900px;
+  height: 1200px;
   p {
-    margin-top: 50px;
+    margin: 50px 0;
     font-size: 40px;
   }
 `;
@@ -94,11 +107,10 @@ const Fifth = styled.div`
   flex-flow: column;
   position: relative;
   width: 100vw;
-  height: 300px;
+  height: 250px;
   border-top: 1px solid black;
   h1 {
-    position: absolute;
-    top: 10px;
+    font-size: 30px;
   }
   #box1 {
     display: flex;

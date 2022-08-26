@@ -31,28 +31,28 @@ export default function Navigation() {
       <ul>
         <li
           onClick={() => {
-            handleIndex(0);
+            handleIndex(1);
           }}
         >
           About
         </li>
         <li
           onClick={() => {
-            handleIndex(1);
+            handleIndex(2);
           }}
         >
           Skills
         </li>
         <li
           onClick={() => {
-            handleIndex(2);
+            handleIndex(3);
           }}
         >
           Projects
         </li>
         <li
           onClick={() => {
-            handleIndex(3);
+            handleIndex(4);
           }}
         >
           Contact
