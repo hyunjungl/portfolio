@@ -47,39 +47,31 @@ export default function Projects() {
 
 const SlideContainer = styled.div`
   overflow: hidden;
-  box-sizing: border-box;
   width: 1200px;
-  position: relative;
-
   border: 1px solid #ddd;
   background-color: red;
 `;
 
 const SlideList = styled.ul`
-  /* width: 1200px; */
-
   display: flex;
-  /* border: 1px solid #ddd; */
-  /* padding: 10px; */
   transition: 0.3s;
-
-  box-sizing: border-box;
 `;
 
 const SlideItem = styled.li`
   width: 100%;
-  height: 700px;
+  height: 400px;
   display: flex;
   flex-shrink: 0;
   justify-content: center;
   align-items: center;
   background-color: tomato;
+  margin-bottom: 100px;
   ${({ color }) => css`
     background: ${color};
   `}
 `;
 
-const Button = styled.div`
+const Button = styled.button`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);

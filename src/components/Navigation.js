@@ -31,6 +31,13 @@ export default function Navigation() {
       <ul>
         <li
           onClick={() => {
+            handleIndex(0);
+          }}
+        >
+          Home
+        </li>
+        <li
+          onClick={() => {
             handleIndex(1);
           }}
         >
@@ -41,18 +48,11 @@ export default function Navigation() {
             handleIndex(2);
           }}
         >
-          Skills
-        </li>
-        <li
-          onClick={() => {
-            handleIndex(3);
-          }}
-        >
           Projects
         </li>
         <li
           onClick={() => {
-            handleIndex(4);
+            handleIndex(3);
           }}
         >
           Contact

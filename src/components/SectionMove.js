@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useEffect } from "react";
 import { useRecoilState } from "recoil";
-import styled, { css } from "styled-components";
+// import styled, { css } from "styled-components";
 import { sectionIdx } from "../App";
 
 export default function SectionMove() {
@@ -25,7 +25,7 @@ export default function SectionMove() {
     const handleIndex = (e) => {
       e.preventDefault();
       if (e.deltaY > 0) {
-        if (index < 3) setIndex((index) => index + 1);
+        if (index < 4) setIndex((index) => index + 1);
       } else {
         if (index > 0) setIndex(index - 1);
       }
@@ -38,9 +38,8 @@ export default function SectionMove() {
   }, [setIndex, index]);
 
   return (
-    <div styled={{ height: "500vh" }}>
+    <div styled={{ height: "100vh" }}>
       <div style={{ position: "fixed", top: 0 }}>
-        {" "}
         {scroll}
         {scroll > 200 ? "200px 이상 내려옴" : "200px 이상 내려오지 않음"}
         인덱스: {index}
@@ -55,9 +54,9 @@ export default function SectionMove() {
   );
 }
 
-const Text = styled.p`
-  ${({ scroll }) => css`
-    transform: translate(${scroll}PX);
-    opacity: ${scroll - 200};
-  `}
-`;
+// const Text = styled.p`
+//   ${({ scroll }) => css`
+//     transform: translate(${scroll}PX);
+//     opacity: ${scroll - 200};
+//   `}
+// `;
