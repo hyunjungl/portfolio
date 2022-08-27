@@ -50,6 +50,8 @@ const SlideContainer = styled.div`
   width: 1200px;
   border: 1px solid #ddd;
   background-color: red;
+  position: relative;
+
 `;
 
 const SlideList = styled.ul`
