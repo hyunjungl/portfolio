@@ -48,24 +48,28 @@ export default function Projects() {
 const SlideContainer = styled.div`
   overflow: hidden;
   width: 1200px;
+  height: 500px;
   border: 1px solid #ddd;
-  background-color: red;
   position: relative;
-
+  
 `;
 
 const SlideList = styled.ul`
   display: flex;
+  justify-content: center;
+  align-items: center;
   transition: 0.3s;
+  overflow: hidden;
 `;
 
 const SlideItem = styled.li`
-  width: 100%;
-  height: 400px;
-  display: flex;
-  flex-shrink: 0;
+  width: 1000px;
+  height:300px;
+  /* display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: center; */
+  /* flex-shrink: 0; */
+ 
   background-color: tomato;
   margin-bottom: 100px;
   ${({ color }) => css`

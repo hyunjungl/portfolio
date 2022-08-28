@@ -17,7 +17,7 @@ export default function MainPage() {
       <Second>
         <SectionMove />
         <Navigation />
-        <Head>ABOUT</Head>
+        <p>ABOUT</p>
        <About />
       </Second>
       
@@ -47,16 +47,13 @@ const Second = styled.div`
   width: 100vw;
   height: 100vh;
   background: white;
+  p {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    font-size: 40px;
+  }
 `;
-
-const Head=styled.div`
-display: flex;
-justify-content: center;
-  margin-top: 50px;
-  font-size: 40px;
-`;
-
-
 
 const Third = styled.div`
   display: flex;

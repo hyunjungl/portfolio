@@ -84,7 +84,7 @@ const NavBlock = styled.nav`
     display: flex;
     justify-content: end;
     align-items: center;
-    height: 70px;
+    height: 60px;
     color: white;
     font-size: 20px;
     bottom: 0;
