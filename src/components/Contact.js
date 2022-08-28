@@ -3,26 +3,35 @@ import { RiKakaoTalkFill } from "react-icons/ri";
 import { FiPhone } from "react-icons/fi";
 import { VscMail } from "react-icons/vsc";
 import { BsGithub } from "react-icons/bs";
+import { BiArrowToTop } from "react-icons/bi";
+
+
 
 export default function Contact() {
+
   return ( <>
-            <Head>CONTACT</Head>
+      <Button>
+        <BiArrowToTop size={50} />
+      </Button>
+          <Head>CONTACT</Head>
            <Container>
-                <Block1>
+              <Block1>
                 <FiPhone/>010.9112.7755
                 <VscMail/>amandalhj@kakao.com
-                </Block1>
+              </Block1>
                         
-                         <Block2>
+              <Block2>
                 <RiKakaoTalkFill size={50} />
                 <BsGithub size={50} />
-                        </Block2>
-                        </Container>
-          
+              </Block2>
+            </Container>
         </>
   );
 }
-
+const Button =styled.div`
+position: absolute;
+right: 50px;
+`
 const Head=styled.div`
 display: flex;
 justify-content: center;

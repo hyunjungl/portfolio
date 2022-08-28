@@ -36,10 +36,10 @@ export default function MainPage() {
 const Header = styled.div`
   width: 100vw;
   height: 100vh;
-  /* background: url(${require("../img/fireworks.jpg")}); 
+   /* background: url(${require("../img/fire.jpg")}); 
   background-size: 100%; 
-  background-repeat: no-repeat;  */
-  /* background-position: 400px 300px; */
+  background-repeat: no-repeat;  
+  background-position: 80%; */
   background-color: black;
 `;
 

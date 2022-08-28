@@ -1,12 +1,13 @@
-
-import styled from "styled-components";
+import styled,{keyframes} from "styled-components";
+import React from "react";
 
 export default function Title() {
+   
 return (
     <TitleContainer>
         <TitleLists>
-            <TitleItem>FRONT-END DEV.</TitleItem>
-            <TitleItem>Im Hyun Jung</TitleItem>
+            <TitleItem >FRONT-END DEV.</TitleItem>
+            <TitleItem >Im Hyun Jung</TitleItem>
             <MenuBox>
             <Button>ABOUT</Button>
             <Button>PROJECTS</Button>
@@ -20,18 +21,34 @@ return (
 
 const TitleContainer =styled.div`
 display: flex;
+flex-direction: column;
 justify-content: center;
 align-items: center;
 text-align: center;
-top: 500px;
-font-size: 100px;
 padding-top: 100px;
+font-size: 100px;
 color: white;
+`;
+
+const bounce =keyframes`
+ 0% {
+    transform: scale(0)
+  }
+  100% {
+    transform: scale(1)
+  }
+
 
 `
-const TitleLists =styled.ul`
-`
-const TitleItem =styled.li``
+
+const TitleLists =styled.div`
+animation:${bounce} 1s;
+`;
+
+
+
+const TitleItem =styled.div``;
+
 
 const MenuBox=styled.div`
 display: flex;

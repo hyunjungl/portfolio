@@ -50,6 +50,7 @@ border: 1px solid black;
  
 `;
 const Text=styled.div`
+font-size: 20px;
 `;
 
 const Block2=styled.div`
