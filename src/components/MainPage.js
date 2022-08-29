@@ -2,10 +2,9 @@ import styled from "styled-components";
 import Navigation from "./Navigation";
 import SectionMove from "./SectionMove";
 import Projects from "./Projects";
-import Title from './Title';
+import Title from "./Title";
 import About from "./About";
 import Contact from "./Contact";
-
 
 export default function MainPage() {
   return (
@@ -18,17 +17,15 @@ export default function MainPage() {
         <SectionMove />
         <Navigation />
         <p>ABOUT</p>
-       <About />
+        <About />
       </Second>
-      
+
       <Third>
         <p>PROJECTS</p>
         <Projects />
       </Third>
 
-      <Footer>
-        <Contact />
-      </Footer>
+      {/* <Footer><Contact /></Footer> */}
     </>
   );
 }
@@ -36,11 +33,12 @@ export default function MainPage() {
 const Header = styled.div`
   width: 100vw;
   height: 100vh;
-   /* background: url(${require("../img/fire.jpg")}); 
+  /* background: url(${require("../img/fire.jpg")}); 
   background-size: 100%; 
   background-repeat: no-repeat;  
   background-position: 80%; */
-  background-color: black;
+  background-color: #000;
+  overflow: hidden;
 `;
 
 const Second = styled.div`
@@ -67,8 +65,8 @@ const Third = styled.div`
   }
 `;
 
-const Footer = styled.div`
-  width: 100vw;
-  height: 100vh;
-  border-top: 1px solid black;
-`;
+// const Footer = styled.div`
+//   width: 100vw;
+//   height: 300px;
+//   border-top: 1px solid black;
+// `;

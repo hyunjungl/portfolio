@@ -1,8 +1,9 @@
 import MainPage from "./components/MainPage";
 import { createGlobalStyle } from "styled-components";
 import Skills from "./components/Skills";
-import React from "react";
-import { RecoilRoot, atom } from "recoil";
+import React, { useEffect } from "react";
+import { atom } from "recoil";
+import useWheel from "./hooks/useWheel";
 
 export const sectionIdx = atom({
   key: "sectionIdx",
@@ -25,14 +26,17 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 function App() {
+  const index = useWheel(5);
+  console.log(index);
+  useEffect(() => {
+    window.scrollTo({ top: window.innerHeight * index, behavior: "smooth" });
+  }, [index]);
   return (
     <>
       <GlobalStyle />
-      <RecoilRoot>
-        <MainPage>
-          <Skills />
-        </MainPage>
-      </RecoilRoot>
+      <MainPage>
+        <Skills />
+      </MainPage>
     </>
   );
 }

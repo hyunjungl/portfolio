@@ -2,20 +2,21 @@ import styled, { css } from "styled-components";
 import { useState, useEffect } from "react";
 import { useSetRecoilState } from "recoil";
 import { sectionIdx } from "../App";
+import { slideState } from "../atoms/slide";
 
 export default function Navigation() {
   //네비게이션 스크롤시 나타남
   const [scrollY, setScrollY] = useState(0);
-  const setIndex = useSetRecoilState(sectionIdx);
+  const setIndex = useSetRecoilState(slideState);
   // const [scrollActive, setScrollActiove] = useState(false);
   function handleIndex(index) {
     setIndex(index);
   }
   function handleScroll() {
     setScrollY(window.scrollY);
-    console.log(scrollY);
+    // console.log(scrollY);
   }
-  console.log(window.innerHeight);
+  // console.log(window.innerHeight);
   useEffect(() => {
     function scrollListener() {
       window.addEventListener("scroll", handleScroll);
@@ -27,7 +28,7 @@ export default function Navigation() {
   });
 
   return (
-    <NavBlock active={scrollY > window.innerHeight}>
+    <NavBlock active={scrollY >= window.innerHeight}>
       <ul>
         <li
           onClick={() => {

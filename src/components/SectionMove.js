@@ -7,6 +7,7 @@ import { sectionIdx } from "../App";
 export default function SectionMove() {
   const [scroll, setScroll] = useState(0);
   const [index, setIndex] = useRecoilState(sectionIdx);
+  const [timer, setTimer] = useState(null);
 
   const handleScroll = () => {
     setScroll(window.scrollY);
@@ -19,30 +20,46 @@ export default function SectionMove() {
     };
   }, []);
 
+  // useEffect(() => {
+  //   window.scrollTo({ top: 1000 * index, behavior: "smooth" });
+
+  //   const handleIndex = (e) => {
+  //     e.preventDefault();
+  //     if (e.deltaY > 0) {
+  //       if (index < 4) setIndex((index) => index + 1);
+  //     } else {
+  //       if (index > 0) setIndex(index - 1);
+  //     }
+  //   };
+  //   window.addEventListener("wheel", handleIndex, { passive: false });
+  //   return () => {
+  //     window.removeEventListener("wheel", handleIndex, { passive: false });
+  //   };
+  // }, [setIndex, index]);
+
   useEffect(() => {
-    window.scrollTo({ top: 1000 * index, behavior: "smooth" });
-
-    const handleIndex = (e) => {
-      e.preventDefault();
-      if (e.deltaY > 0) {
-        if (index < 4) setIndex((index) => index + 1);
-      } else {
-        if (index > 0) setIndex(index - 1);
+    const handleWheel = (e) => {
+      if (timer) {
+        clearTimeout(timer);
       }
+      // const id = setTimeout(() => {
+      //   setIndex(index + 1);
+      // }, 400);
+      // setTimer(id);
     };
 
-    window.addEventListener("wheel", handleIndex, { passive: false });
+    window.addEventListener("wheel", handleWheel, { passive: false });
     return () => {
-      window.removeEventListener("wheel", handleIndex, { passive: false });
+      window.removeEventListener("wheel", handleWheel, { passive: false });
     };
-  }, [setIndex, index]);
+  }, [setTimer, timer, index]);
 
   return (
     <div styled={{ height: "100vh" }}>
       <div style={{ position: "fixed", top: 0 }}>
-        {scroll}
+        {/* {scroll}
         {scroll > 200 ? "200px 이상 내려옴" : "200px 이상 내려오지 않음"}
-        인덱스: {index}
+        인덱스: {index} */}
       </div>
       {/* <Text style={{ marginTop: 500 }} scroll={scroll}>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsa

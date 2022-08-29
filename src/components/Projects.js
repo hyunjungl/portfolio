@@ -47,37 +47,33 @@ export default function Projects() {
 
 const SlideContainer = styled.div`
   overflow: hidden;
-  width: 1200px;
   height: 500px;
   border: 1px solid #ddd;
   position: relative;
-  
 `;
 
 const SlideList = styled.ul`
+  width: 1200px;
   display: flex;
-  justify-content: center;
   align-items: center;
   transition: 0.3s;
-  overflow: hidden;
 `;
 
 const SlideItem = styled.li`
-  width: 1000px;
-  height:300px;
-  /* display: flex;
+  width: 1200px;
+  height: 500px;
+  display: flex;
   justify-content: center;
-  align-items: center; */
-  /* flex-shrink: 0; */
- 
-  background-color: tomato;
+  align-items: center;
+  flex-shrink: 0;
+
   margin-bottom: 100px;
   ${({ color }) => css`
     background: ${color};
   `}
 `;
 
-const Button = styled.button`
+const Button = styled.div`
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
