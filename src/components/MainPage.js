@@ -33,6 +33,13 @@ export default function MainPage() {
 const Header = styled.div`
   width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 100px;
+  color: #fff;
   /* background: url(${require("../img/fire.jpg")}); 
   background-size: 100%; 
   background-repeat: no-repeat;  

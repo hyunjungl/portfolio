@@ -31,8 +31,8 @@ export default function Projects() {
   return (
     <SlideContainer>
       <SlideList ref={slideRef}>
-        <SlideItem color="red">1</SlideItem>
-        <SlideItem color="blue">2</SlideItem>
+        <SlideItem bg={"../img/fire.jpg"}></SlideItem>
+        <SlideItem></SlideItem>
       </SlideList>
 
       <Button>
@@ -47,21 +47,20 @@ export default function Projects() {
 
 const SlideContainer = styled.div`
   overflow: hidden;
-  height: 500px;
-  border: 1px solid #ddd;
+  height: 700px;
   position: relative;
 `;
 
 const SlideList = styled.ul`
-  width: 1200px;
+  width: 1500px;
   display: flex;
   align-items: center;
   transition: 0.3s;
 `;
 
 const SlideItem = styled.li`
-  width: 1200px;
-  height: 500px;
+  width: 1500px;
+  height: 700px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -70,6 +69,10 @@ const SlideItem = styled.li`
   margin-bottom: 100px;
   ${({ color }) => css`
     background: ${color};
+  `}
+
+  ${({ bg }) => css`
+    background: url(${url});
   `}
 `;
 
