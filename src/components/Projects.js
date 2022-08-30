@@ -31,7 +31,7 @@ export default function Projects() {
   return (
     <SlideContainer>
       <SlideList ref={slideRef}>
-        <SlideItem bg={"../img/fire.jpg"}></SlideItem>
+        <SlideItem></SlideItem>
         <SlideItem></SlideItem>
       </SlideList>
 
@@ -52,14 +52,14 @@ const SlideContainer = styled.div`
 `;
 
 const SlideList = styled.ul`
-  width: 1500px;
+  /* width: 1500px; */
   display: flex;
   align-items: center;
   transition: 0.3s;
 `;
 
 const SlideItem = styled.li`
-  width: 1500px;
+  /* width: 1500px; */
   height: 700px;
   display: flex;
   justify-content: center;
@@ -70,10 +70,6 @@ const SlideItem = styled.li`
   ${({ color }) => css`
     background: ${color};
   `}
-
-  ${({ bg }) => css`
-    background: url(${url});
-  `}
 `;
 
 const Button = styled.div`
@@ -83,4 +79,5 @@ const Button = styled.div`
   :nth-child(3) {
     right: 0;
   }
+  cursor: pointer;
 `;

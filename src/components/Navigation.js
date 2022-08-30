@@ -29,36 +29,36 @@ export default function Navigation() {
 
   return (
     <NavBlock active={scrollY >= window.innerHeight}>
-      <ul>
-        <li
+      <NavList>
+        <NavItem
           onClick={() => {
             handleIndex(0);
           }}
         >
           Home
-        </li>
-        <li
+        </NavItem>
+        <NavItem
           onClick={() => {
             handleIndex(1);
           }}
         >
           About
-        </li>
-        <li
+        </NavItem>
+        <NavItem
           onClick={() => {
             handleIndex(2);
           }}
         >
           Projects
-        </li>
-        <li
+        </NavItem>
+        <NavItem
           onClick={() => {
             handleIndex(3);
           }}
         >
           Contact
-        </li>
-      </ul>
+        </NavItem>
+      </NavList>
     </NavBlock>
   );
 }
@@ -81,19 +81,18 @@ const NavBlock = styled.nav`
         transition: 1s;
       }
     `}
-  ul {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    height: 60px;
-    color: white;
-    font-size: 20px;
-    bottom: 0;
-    padding-right: 50px;
-    /* background: royalblue; */
-    /* border-bottom: 3px solid #04c2c9; */
-  }
-  li + li {
-    margin-left: 50px;
-  }
+`;
+const NavList = styled.div`
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  height: 60px;
+  color: white;
+  font-size: 20px;
+  bottom: 0;
+  padding-right: 50px;
+`;
+const NavItem = styled.div`
+  margin-left: 50px;
+  cursor: pointer;
 `;

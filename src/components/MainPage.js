@@ -8,10 +8,10 @@ import Contact from "./Contact";
 
 export default function MainPage() {
   return (
-    <>
-      <Header id="scroll-container">
+    <div>
+      <First id="scroll-container">
         <Title />
-      </Header>
+      </First>
 
       <Second>
         <SectionMove />
@@ -25,13 +25,15 @@ export default function MainPage() {
         <Projects />
       </Third>
 
-      {/* <Footer><Contact /></Footer> */}
-    </>
+      <Footer>
+        <Contact />
+      </Footer>
+    </div>
   );
 }
 
-const Header = styled.div`
-  width: 100vw;
+const First = styled.div`
+  /* width: 100vw; */
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -49,7 +51,7 @@ const Header = styled.div`
 `;
 
 const Second = styled.div`
-  width: 100vw;
+  /* width: 100vw; */
   height: 100vh;
   background: white;
   p {
@@ -64,7 +66,7 @@ const Third = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100vw;
+  /* width: 100vw; */
   height: 100vh;
   p {
     margin: 50px 0;
@@ -72,8 +74,7 @@ const Third = styled.div`
   }
 `;
 
-// const Footer = styled.div`
-//   width: 100vw;
-//   height: 300px;
-//   border-top: 1px solid black;
-// `;
+const Footer = styled.div`
+  /* width: 100vw; */
+  height: 300px;
+`;
